@@ -55,14 +55,19 @@ class Cart(models.Model):
 
     @property
     def price(self):
-        return self.product.price
+        if self.product:  # Check if product is not None
+            return self.product.price
+        return 0  # Default price if no product
 
     @property
     def amount(self):
-        return self.qty * self.product.price
+        if self.product:  # Check if product is not None
+            return self.qty * self.product.price
+        return 0  # Default amount if no product
 
     def __str__(self):
-        return self.product.product_name + " by " + self.user.username
+        return self.product.product_name + " by " + self.user.username if self.product else "No Product"
+
 
 
 STATUS = (

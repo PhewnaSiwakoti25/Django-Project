@@ -38,3 +38,4 @@ urlpatterns = [
     path("account/changepassword/", changepassword.changepassword, name="ChangePassword"),
     path("logout/", logout.logout_view, name="Logout")
 ]
+

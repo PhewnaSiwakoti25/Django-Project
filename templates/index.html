@@ -24,23 +24,23 @@ Lifestyle Electronics
 <div id="slides-shop" class="cover-slides" style="height:500px">
     <ul class="slides-container">
         <li class="text-left">
-            <img src="{% static 'images/bg1.jpg' %}" alt="">
+            <img src="{% static 'images/bg1.png' %}" alt="">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Lifestyle Electronics</strong></h1>
-                        <p class="m-b-40">One Stop destination for all your electronic needs...</p>
+                        <h1 class="m-b-20"><strong>Welcome To <br> Electric Store</strong></h1>
+                        <p class="m-b-40">"Discover. Shop. Enjoy."</p>
                         <p><a class="btn hvr-hover" href="/products">Shop Now</a></p>
                     </div>
                 </div>
             </div>
         </li>
         <li class="text-left">
-            <img src="{% static 'images/bg2.jpg' %}" alt="">
+            <img src="{% static 'images/bg2.png' %}" alt="">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Lifestyle Electronics</strong></h1>
+                        <h1 class="m-b-20"><strong>Welcome To <br> Electric Store</strong></h1>
                         <p class="m-b-40">10% instant discount up to ₹ 10,000 on all products</p>
                         <p><a class="btn hvr-hover" href="/products">Shop Now</a></p>
                     </div>
@@ -48,11 +48,11 @@ Lifestyle Electronics
             </div>
         </li>
         <li class="text-left">
-            <img src="{% static 'images/bg3.jpg' %}" alt="">
+            <img src="{% static 'images/bg3.png' %}" alt="">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Lifestyle Electronics</strong></h1>
+                        <h1 class="m-b-20"><strong>Welcome To <br> Electric Store</strong></h1>
                         <p class="m-b-40">Free shipping on all the products accross the world</p>
                         <p><a class="btn hvr-hover" href="/products">Shop Now</a></p>
                     </div>
@@ -119,47 +119,7 @@ Lifestyle Electronics
     </div>
 </div>
 
-<div class="products-box" style="padding:20px 0px;" id="mobiles">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="title-all text-center">
-                    <h1>Featured Mobiles</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            {% for mobile in mobiles %}
-            <div class="col-lg-3 col-md-6 special-grid" >
-                <div class="products-single fix shadow-sm p-2 bg-white rounded">
-                    <a href="/productdetail/{{mobile.id}}">
-                    <div class="box-img-hover ctr" style="height:255px;">
-                        <div class="type-lb">
-                            <p class="sale">Sale</p>
-                        </div>
-                        <img src="{{mobile.product_img.url}}" class="img-fluid" alt="Image">
-                        <div class="mask-icon"></div>
-                    </div></a>
-                    <div class="why-text text-center" style="height:155px;">
-                        <h4><a href="/productdetail/{{mobile.id}}">{{mobile.product_name}}</a></h4>
-                        <h5>₹ {{mobile.price|intcomma}}</h5>
-                        <div class="mt-2">
-                            <a href="/buynow/{{mobile.id}}" class="btn hvr-hover cart" style="color:white">Buy Now</a>
-                            <a href="/addtocart/{{mobile.id}}" class="btn hvr-hover cart" style="color:white">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        <div class="row">
-            <div class="col-lg-12 ctr">
-                <a href="/products?category=1" class="btn hvr-hover" style="color:white">Show All</a>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="products-box" style="padding:20px 0px;">
     <div class="container">
         <div class="row">
@@ -201,6 +161,49 @@ Lifestyle Electronics
         </div>
     </div>
 </div>
+
+<div class="products-box" style="padding:20px 0px;" id="mobiles">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-all text-center">
+                    <h1>Featured Mobiles</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for mobile in mobiles %}
+            <div class="col-lg-3 col-md-6 special-grid" >
+                <div class="products-single fix shadow-sm p-2 bg-white rounded">
+                    <a href="/productdetail/{{mobile.id}}">
+                    <div class="box-img-hover ctr" style="height:255px;">
+                        <div class="type-lb">
+                            <p class="sale">Sale</p>
+                        </div>
+                        <img src="{{mobile.product_img.url}}" class="img-fluid" alt="Image">
+                        <div class="mask-icon"></div>
+                    </div></a>
+                    <div class="why-text text-center" style="height:155px;">
+                        <h4><a href="/productdetail/{{mobile.id}}">{{mobile.product_name}}</a></h4>
+                        <h5>₹ {{mobile.price|intcomma}}</h5>
+                        <div class="mt-2">
+                            <a href="/buynow/{{mobile.id}}" class="btn hvr-hover cart" style="color:white">Buy Now</a>
+                            <a href="/addtocart/{{mobile.id}}" class="btn hvr-hover cart" style="color:white">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-lg-12 ctr">
+                <a href="/products?category=1" class="btn hvr-hover" style="color:white">Show All</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="products-box" style="padding:20px 0px;">
     <div class="container">
         <div class="row">
@@ -242,88 +245,44 @@ Lifestyle Electronics
         </div>
     </div>
 </div>
+
+<!-- Why Choose Us Section -->
 <div class="products-box" style="padding:20px 0px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="title-all text-center">
-                    <h1>Featured Headphones</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                    <h1>Why You Choose Us?</h1>
                 </div>
             </div>
         </div>
-        <div class="row">
-            {% for headphone in headphones %}
-            <div class="col-lg-3 col-md-6 special-grid">
-                <div class="products-single fix shadow-sm p-2 bg-white rounded">
-                    <a href="/productdetail/{{headphone.id}}">
-                    <div class="box-img-hover ctr" style="height:255px;">
-                        <div class="type-lb">
-                            <p class="sale">Sale</p>
-                        </div>
-                        <img src="{{headphone.product_img.url}}" class="img-fluid" alt="Image">
-                        <div class="mask-icon"></div>
-                    </div></a>
-                    <div class="why-text text-center" style="height:155px;">
-                        <h4><a href="/productdetail/{{headphone.id}}">{{headphone.product_name}}</a></h4>
-                        <h5>₹ {{headphone.price|intcomma}}</h5>
-                        <div class="mt-2">
-                            <a href="/buynow/{{headphone.id}}" class="btn hvr-hover cart" style="color:white">Buy Now</a>
-                            <a href="/addtocart/{{headphone.id}}" class="btn hvr-hover cart" style="color:white">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
+<div class="container mt-5">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="why-choose-box shadow p-4 rounded">
+                <i class="fas fa-shipping-fast fa-3x mb-3"></i>
+                <h3>Free Shipping</h3>
+                <p>Enjoy free shipping on all orders across the world.</p>
             </div>
-            {% endfor %}
         </div>
-        <div class="row">
-            <div class="col-lg-12 ctr">
-                <a href="/products?category=6" class="btn hvr-hover" style="color:white">Show All</a>
+        <div class="col-md-4">
+            <div class="why-choose-box shadow p-4 rounded">
+                <i class="fas fa-undo-alt fa-3x mb-3"></i>
+                <h3>Hassle-Free Returns</h3>
+                <p>Easy and quick returns with no questions asked.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="why-choose-box shadow p-4 rounded">
+                <i class="fas fa-headset fa-3x mb-3"></i>
+                <h3>24/7 Support</h3>
+                <p>Our team is here to assist you around the clock.</p>
             </div>
         </div>
     </div>
 </div>
-<div class="products-box" style="padding:20px 0px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="title-all text-center">
-                    <h1>Featured Kitchen Appliances</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            {% for kitapp in kitapps %}
-            <div class="col-lg-3 col-md-6 special-grid">
-                <div class="products-single fix shadow-sm p-2 bg-white rounded">
-                    <a href="/productdetail/{{kitapp.id}}">
-                    <div class="box-img-hover ctr" style="height:255px;">
-                        <div class="type-lb">
-                            <p class="sale">Sale</p>
-                        </div>
-                        <img src="{{kitapp.product_img.url}}" class="img-fluid" alt="Image">
-                        <div class="mask-icon"></div>
-                    </div></a>
-                    <div class="why-text text-center" style="height:155px;">
-                        <h4><a href="/productdetail/{{kitapp.id}}">{{kitapp.product_name}}</a></h4>
-                        <h5>₹ {{kitapp.price|intcomma}}</h5>
-                        <div class="mt-2">
-                            <a href="/buynow/{{kitapp.id}}" class="btn hvr-hover cart" style="color:white">Buy Now</a>
-                            <a href="/addtocart/{{kitapp.id}}" class="btn hvr-hover cart" style="color:white">Add to Cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        <div class="row">
-            <div class="col-lg-12 ctr">
-                <a href="/products?category=8" class="btn hvr-hover" style="color:white">Show All</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Products  -->
+<!-- End Why Choose Us Section -->
+
+
 
 {% endblock %}
